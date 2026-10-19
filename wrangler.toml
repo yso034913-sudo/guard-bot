@@ -1,0 +1,16 @@
+name = "guard-bot"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# كل دقيقة: القفل المجدول + حذف رسائل الترحيب/التبليغ المؤجلة
+[triggers]
+crons = ["* * * * *"]
+
+[[durable_objects.bindings]]
+name = "BOT_DO"
+class_name = "BotDO"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["BotDO"]
