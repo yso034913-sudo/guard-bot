@@ -1,8 +1,0 @@
-{
-  "name": "guard-bot",
-  "private": true,
-  "type": "module",
-  "scripts": { "deploy": "wrangler deploy", "dev": "wrangler dev" },
-  "dependencies": { "grammy": "^1.30.0" },
-  "devDependencies": { "wrangler": "^4.0.0" }
-}
